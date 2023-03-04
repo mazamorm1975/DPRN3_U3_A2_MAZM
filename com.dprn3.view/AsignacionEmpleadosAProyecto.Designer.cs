@@ -64,7 +64,7 @@ namespace DPRNIII_U2_A1_MAZM
             // nuevoEmpleadoToolStripMenuItem
             // 
             this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
-            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo_Empleado";
             this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
             // 
@@ -79,7 +79,7 @@ namespace DPRNIII_U2_A1_MAZM
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -114,7 +114,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AsignacionEmpleadosAProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MODULO_GESTION_PROYECTOS_Version_1.0";
+            this.Text = "MODULO_GESTION_PROYECTOS_Version_1.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AsignacionEmpleadosAProyecto_Load);
             this.menuStrip1.ResumeLayout(false);
