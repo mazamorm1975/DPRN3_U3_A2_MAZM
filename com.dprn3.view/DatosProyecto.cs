@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DPRNIII_U2_A1_MAZM.com.dprn3.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,10 @@ namespace DPRNIII_U2_A1_MAZM
 {
     public partial class frmAsignacionProyectos : Form
     {
-        
+
+        public static string noEmpleado = "";
+        public static int asignacionEmpleado;
+
         clsAltaInformacion consultaProyecto = new clsAltaInformacion();
         int isAsignacion = 0;
 
@@ -29,6 +33,8 @@ namespace DPRNIII_U2_A1_MAZM
         private void btnIngresarAsignacion_Click(object sender, EventArgs e)
         {
             //Variables que reciben la información de los componentes
+            noEmpleado = cboNumeroEmpleado.Text;
+            
             String idEmpleado = cboNumeroEmpleado.Text;
             String idProyecto = cboFolio.Text;
             String comentarios = txtComentarios.Text;
@@ -37,14 +43,17 @@ namespace DPRNIII_U2_A1_MAZM
             if (rdbAsignado.Checked.Equals(true))
             {
                 isAsignacion = 1;
+                asignacionEmpleado = isAsignacion;
             }
             else
             {
                 isAsignacion = 0;
-            }           
+                asignacionEmpleado = isAsignacion;
+            }
 
-            clsAltaInformacion.insertarDatosNuevaAsignacionAProyecto(idEmpleado, idProyecto, isAsignacion, comentarios);
-            //MiCajaDeMensajes.ErrorParaGuardarDatos("Información Guardada Exitosamente", "Ingreso A Base De Datos");
+            //Se inicia validación de reglas de negocio
+            reglasDeNegocio.ValidacionAsignacionEmpleadoProyecto();
+
 
         }
 
@@ -63,5 +72,9 @@ namespace DPRNIII_U2_A1_MAZM
             dgvConsultaProyectos.DataSource = consultaProyecto.ConsultarProyecto_Empleado();
         }
 
+        private void contenedorAsignacionProyecto_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

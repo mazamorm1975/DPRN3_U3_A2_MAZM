@@ -45,7 +45,39 @@ namespace DPRNIII_U2_A1_MAZM
             return Tabla;
         }
 
-        //Consultar Vehiculos   
+        public static int contarTotalRegistros()
+        {
+            MySqlConnection contar = null;
+            contar = conectarBase.conectarBaseDatos();
+            MySqlCommand cmd = new MySqlCommand("SELECT count(*) FROM empleado_proyecto", contar);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+            return result;
+        }
+
+        //Valida si se puede realizar la asignacion acorde a las reglas del negocio
+        public static int isAssigned()
+        {
+            MySqlConnection conn = null;
+            //Valida conexion con base de datos: base_test
+            conn = conectarBase.conectarBaseDatos();
+            MySqlCommand cmd = new MySqlCommand("SELECT asignado FROM empleado_proyecto WHERE idEmpleado = '"+frmAsignacionProyectos.noEmpleado+"'", conn);
+            int result = (int) cmd.ExecuteScalar();
+            return result;
+        }
+
+        
+        //Actualiza status del proyecto
+        public static void actualizaInformaciónProyecto()
+        {
+            MySqlConnection connUpdate = null;
+            connUpdate = conectarBase.conectarBaseDatos();
+            MySqlCommand dataAdapter = new MySqlCommand();
+            dataAdapter = new MySqlCommand("UPDATE empleado_proyecto SET asignado = '"+frmAsignacionProyectos.asignacionEmpleado+"' WHERE idEmpleado = '"+frmAsignacionProyectos.noEmpleado+"'", connUpdate);
+            dataAdapter.ExecuteReader();
+        }
+
+
+        //Consultar Departamentos   
         public DataTable ConsultarDatosDepartamento()
         {
 
@@ -89,7 +121,7 @@ namespace DPRNIII_U2_A1_MAZM
 
             try
             {
-                String consulta = "SELECT * FROM empleado_proyecto;";
+                string consulta = "SELECT * FROM empleado_proyecto;";
                 buscar = new MySqlDataAdapter(consulta, conn.ConnectionString);
                 buscar.Fill(Tabla);
             }

@@ -68,6 +68,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.contenedorAsignacionProyecto.TabIndex = 0;
             this.contenedorAsignacionProyecto.TabStop = false;
             this.contenedorAsignacionProyecto.Text = "Nueva_Asignacion_Empleado";
+            this.contenedorAsignacionProyecto.Enter += new System.EventHandler(this.contenedorAsignacionProyecto_Enter);
             // 
             // btnConsultar
             // 
@@ -456,7 +457,6 @@ namespace DPRNIII_U2_A1_MAZM
         #endregion
 
         private System.Windows.Forms.GroupBox contenedorAsignacionProyecto;
-        private System.Windows.Forms.ComboBox cboNumeroEmpleado;
         private System.Windows.Forms.Label lblNumeroEmpleado;
         private System.Windows.Forms.Label lblFolio;
         private System.Windows.Forms.ComboBox cboFolio;
@@ -471,5 +471,6 @@ namespace DPRNIII_U2_A1_MAZM
         private FontAwesome.Sharp.IconButton btnConsultar;
         private System.Windows.Forms.DataGridView dgvConsultaProyectos;
         private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.ComboBox cboNumeroEmpleado;
     }
 }
