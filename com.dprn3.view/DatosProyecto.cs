@@ -16,9 +16,11 @@ namespace DPRNIII_U2_A1_MAZM
 
         public static string noEmpleado = "";
         public static int asignacionEmpleado;
+        public static string comentarios;
+        public static string idProyecto = "";
 
         clsAltaInformacion consultaProyecto = new clsAltaInformacion();
-        int isAsignacion = 0;
+        public static int isAsignacion = 0;
 
         public frmAsignacionProyectos()
         {
@@ -34,10 +36,9 @@ namespace DPRNIII_U2_A1_MAZM
         {
             //Variables que reciben la información de los componentes
             noEmpleado = cboNumeroEmpleado.Text;
-            
             String idEmpleado = cboNumeroEmpleado.Text;
-            String idProyecto = cboFolio.Text;
-            String comentarios = txtComentarios.Text;
+            idProyecto = cboFolio.Text;
+            comentarios = txtComentarios.Text;
 
             //Validacion de los radiobuttons, si es que esta o no asignado el proyecto
             if (rdbAsignado.Checked.Equals(true))
@@ -53,8 +54,7 @@ namespace DPRNIII_U2_A1_MAZM
 
             //Se inicia validación de reglas de negocio
             reglasDeNegocio.ValidacionAsignacionEmpleadoProyecto();
-
-
+            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

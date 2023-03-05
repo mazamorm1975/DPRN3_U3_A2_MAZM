@@ -13,6 +13,9 @@ namespace DPRNIII_U2_A1_MAZM
     public partial class IngresoProyecto : Form
     {
         public static string datoProyecto;
+        public static DateTime fecha;
+        public static string nombreProyecto;
+
         clsAltaInformacion nuevoIngreso = new clsAltaInformacion();
 
         public IngresoProyecto()
@@ -49,12 +52,14 @@ namespace DPRNIII_U2_A1_MAZM
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            String nombreProyecto = cboProyecto.Text;
+            nombreProyecto = cboProyecto.Text;
             String descripcion = txtDescripcionProyecto.Text;
             DateTime fechaInicial = dtFechaInicio.Value;
             DateTime fechaFinal = dtFechaFinal.Value;
             int estatus = Convert.ToInt32(txtStatus.Text);
             int idDepto = Convert.ToInt32(cboDepto.Text);
+            
+
 
             clsAltaInformacion.insertarDatosProyecto(nombreProyecto, descripcion, fechaInicial, fechaFinal, estatus, idDepto);
             this.Close();
