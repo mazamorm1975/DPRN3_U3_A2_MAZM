@@ -9,26 +9,60 @@ namespace DPRNIII_U2_A1_MAZM.com.dprn3.model
 {
     class reglasDeNegocio
     {
+        //Se valida si el empleado puede ser asignado a un proyecto
         public static void ValidacionAsignacionEmpleadoProyecto()
         {
-            int cont = 0;
-            for (int i = 0; i < clsAltaInformacion.contarTotalRegistros(); i++)
+          for (int i = 0; i < clsAltaInformacion.contarTotalRegistrosEmpleadosAsignados(); i++)
             {
-                //Si el status del empleado es 0
-                if (clsAltaInformacion.isAssigned() != 1)
+                //Se valida el proyecto
+                if (ValidaciónIngresoNuevoProyecto() == true)
                 {
-                    clsAltaInformacion.actualizaInformaciónProyecto();
-                    //clsAltaInformacion.insertarDatosNuevaAsignacionAProyecto(idEmpleado, idProyecto, isAsignacion, comentarios);
-                    MessageBox.Show("Empleado Asignado exitosamente al nuevo proyecto. Felicitaciones :) ");
-                    break;
-                }
+                    //Si el status del empleado es 0
+                    if (clsAltaInformacion.isAssigned() != 1)
+                    {
+                        clsAltaInformacion.actualizaInformaciónProyecto();
+                        //clsAltaInformacion.insertarDatosNuevaAsignacionAProyecto(idEmpleado, idProyecto, isAsignacion, comentarios);
 
-                if (clsAltaInformacion.isAssigned() == 1)
+                        MessageBox.Show("Empleado Asignado exitosamente al nuevo proyecto. Felicitaciones :) ");
+                        break;
+                    }
+
+                    //Se valida si se sacara a este empleado del proyecto actual
+                    if (clsAltaInformacion.isAssigned() == 1 && frmAsignacionProyectos.isAsignacion == 0)
+                    {
+                        clsAltaInformacion.actualizaInformaciónProyecto();
+                        MessageBox.Show("Empleado ha dejado el proyecto. ");
+                        break;
+                    }
+
+                    if (clsAltaInformacion.isAssigned() == 1)
+                    {
+                        MessageBox.Show("El empleado no puede estar Activo en más de 1 proyecto. ");
+                        break;
+                    }
+
+
+                } else
                 {
-                    MessageBox.Show("El empleado no puede estar Activo en más de 1 proyecto. ");
                     break;
-                }
+                } 
+                
+
             }
+        }
+
+        //Se valida si el proyecto esta disponible o no esta disponible
+        public static Boolean ValidaciónIngresoNuevoProyecto()
+        {
+            string fechaFinalProyecto = clsAltaInformacion.fechaFinalExist();
+            
+            if(!fechaFinalProyecto.Equals(""))
+            {
+                MessageBox.Show("El proyecto ya ha sido concluido, puesto que hay fecha de terminación.");
+                return false;
+            }
+         
+            return true;
         }
     }
 }

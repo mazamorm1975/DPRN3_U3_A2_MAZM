@@ -459,7 +459,6 @@ namespace DPRNIII_U2_A1_MAZM
         private System.Windows.Forms.GroupBox contenedorAsignacionProyecto;
         private System.Windows.Forms.Label lblNumeroEmpleado;
         private System.Windows.Forms.Label lblFolio;
-        private System.Windows.Forms.ComboBox cboFolio;
         private System.Windows.Forms.RadioButton rdbNoAsignado;
         private System.Windows.Forms.RadioButton rdbAsignado;
         private FontAwesome.Sharp.IconToolStripButton iconToolStripButton1;
@@ -472,5 +471,6 @@ namespace DPRNIII_U2_A1_MAZM
         private System.Windows.Forms.DataGridView dgvConsultaProyectos;
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox cboNumeroEmpleado;
+        public System.Windows.Forms.ComboBox cboFolio;
     }
 }

@@ -20,7 +20,7 @@ namespace DPRNIII_U2_A1_MAZM
             MySqlDataAdapter buscar;
             try
             {
-                string connectionString = "server=localhost; database=base_test; user id=root; password=Cu213lona1973;";
+                string connectionString = "server=localhost; database=base_test; user id=root; password=Cu213lona1973; Allow Zero Datetime=true";
                 //string cadenaConsulta = "SELECT * FROM tb_perfil";
 
                 connection = new MySqlConnection(connectionString);
