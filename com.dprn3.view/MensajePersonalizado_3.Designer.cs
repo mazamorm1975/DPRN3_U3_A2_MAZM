@@ -1,7 +1,7 @@
 ﻿
 namespace DPRNIII_U2_A1_MAZM
 {
-    partial class MensajePersonalizado_2
+    partial class MensajePersonalizado_3
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace DPRNIII_U2_A1_MAZM
         private void InitializeComponent()
         {
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lblMensajePersonalizado_2 = new System.Windows.Forms.Label();
+            this.lblMensajePersonalizado_3 = new System.Windows.Forms.Label();
             this.btnOk = new FontAwesome.Sharp.IconButton();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -47,14 +47,14 @@ namespace DPRNIII_U2_A1_MAZM
             // 
             // lblMensajePersonalizado_2
             // 
-            this.lblMensajePersonalizado_2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.lblMensajePersonalizado_2.AutoSize = true;
-            this.lblMensajePersonalizado_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajePersonalizado_2.Location = new System.Drawing.Point(188, 32);
-            this.lblMensajePersonalizado_2.Name = "lblMensajePersonalizado_2";
-            this.lblMensajePersonalizado_2.Size = new System.Drawing.Size(408, 16);
-            this.lblMensajePersonalizado_2.TabIndex = 3;
-            this.lblMensajePersonalizado_2.Text = "No puede existir mas de 1 Lider De Proyecto en un mismo proyecto";
+            this.lblMensajePersonalizado_3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblMensajePersonalizado_3.AutoSize = true;
+            this.lblMensajePersonalizado_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajePersonalizado_3.Location = new System.Drawing.Point(188, 32);
+            this.lblMensajePersonalizado_3.Name = "lblMensajePersonalizado_2";
+            this.lblMensajePersonalizado_3.Size = new System.Drawing.Size(394, 16);
+            this.lblMensajePersonalizado_3.TabIndex = 3;
+            this.lblMensajePersonalizado_3.Text = "No puede existir mas de 3 programadores en un mismo proyecto";
             // 
             // btnOk
             // 
@@ -82,24 +82,24 @@ namespace DPRNIII_U2_A1_MAZM
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
-            // MensajePersonalizado_2
+            // MensajePersonalizado_3
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 136);
-            this.Controls.Add(this.lblMensajePersonalizado_2);
+            this.Controls.Add(this.lblMensajePersonalizado_3);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnOk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MensajePersonalizado_2";
+            this.Name = "MensajePersonalizado_3";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.MensajePersonalizado_2_Load);
+            this.Load += new System.EventHandler(this.MensajePersonalizado_3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,6 +111,6 @@ namespace DPRNIII_U2_A1_MAZM
         private FontAwesome.Sharp.IconButton btnOk;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Label lblMensajePersonalizado_2;
+        private System.Windows.Forms.Label lblMensajePersonalizado_3;
     }
 }

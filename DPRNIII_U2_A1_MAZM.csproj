@@ -79,6 +79,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="com.dprn3.interfaces\Mensaje.cs" />
+    <Compile Include="com.dprn3.model\Notificacion.cs" />
+    <Compile Include="com.dprn3.model\NotificacionExcedeNumeroEmpleados.cs" />
+    <Compile Include="com.dprn3.model\NotificacionFallo.cs" />
+    <Compile Include="com.dprn3.model\NotificacionFalloAnalistas.cs" />
+    <Compile Include="com.dprn3.model\NotificacionFalloProgramador.cs" />
+    <Compile Include="com.dprn3.model\NotificacionFueraDeProyecto.cs" />
+    <Compile Include="com.dprn3.model\NotificacionGuardar.cs" />
     <Compile Include="com.dprn3.model\reglasDeNegocio.cs" />
     <Compile Include="com.dprn3.view\AsignacionEmpleadosAProyecto.cs">
       <SubType>Form</SubType>
@@ -118,6 +126,30 @@
     <Compile Include="com.dprn3.view\IngresoProyecto.Designer.cs">
       <DependentUpon>IngresoProyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_6.Designer.cs">
+      <DependentUpon>MensajePersonalizado_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_5.Designer.cs">
+      <DependentUpon>MensajePersonalizado_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_4.Designer.cs">
+      <DependentUpon>MensajePersonalizado_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.dprn3.view\MensajePersonalizado_3.Designer.cs">
+      <DependentUpon>MensajePersonalizado_3.cs</DependentUpon>
+    </Compile>
     <Compile Include="com.dprn3.view\MensajePersonalizado_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +182,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="com.dprn3.view\IngresoProyecto.resx">
       <DependentUpon>IngresoProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.dprn3.view\MensajePersonalizado_6.resx">
+      <DependentUpon>MensajePersonalizado_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.dprn3.view\MensajePersonalizado_5.resx">
+      <DependentUpon>MensajePersonalizado_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.dprn3.view\MensajePersonalizado_4.resx">
+      <DependentUpon>MensajePersonalizado_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.dprn3.view\MensajePersonalizado_3.resx">
+      <DependentUpon>MensajePersonalizado_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="com.dprn3.view\MensajePersonalizado_2.resx">
       <DependentUpon>MensajePersonalizado_2.cs</DependentUpon>

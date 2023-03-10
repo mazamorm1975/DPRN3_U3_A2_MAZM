@@ -1,7 +1,7 @@
 ﻿
 namespace DPRNIII_U2_A1_MAZM
 {
-    partial class MensajePersonalizado_2
+    partial class MensajePersonalizado_5
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@ namespace DPRNIII_U2_A1_MAZM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MensajePersonalizado_5));
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lblMensajePersonalizado_2 = new System.Windows.Forms.Label();
             this.btnOk = new FontAwesome.Sharp.IconButton();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -40,66 +40,56 @@ namespace DPRNIII_U2_A1_MAZM
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(150, 29);
+            this.lblMessage.Location = new System.Drawing.Point(195, 37);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(0, 16);
+            this.lblMessage.Size = new System.Drawing.Size(194, 16);
             this.lblMessage.TabIndex = 1;
-            // 
-            // lblMensajePersonalizado_2
-            // 
-            this.lblMensajePersonalizado_2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.lblMensajePersonalizado_2.AutoSize = true;
-            this.lblMensajePersonalizado_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensajePersonalizado_2.Location = new System.Drawing.Point(188, 32);
-            this.lblMensajePersonalizado_2.Name = "lblMensajePersonalizado_2";
-            this.lblMensajePersonalizado_2.Size = new System.Drawing.Size(408, 16);
-            this.lblMensajePersonalizado_2.TabIndex = 3;
-            this.lblMensajePersonalizado_2.Text = "No puede existir mas de 1 Lider De Proyecto en un mismo proyecto";
+            this.lblMessage.Text = "Empleado Abandona Proyecto";
             // 
             // btnOk
             // 
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnOk.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnOk.IconColor = System.Drawing.Color.ForestGreen;
             this.btnOk.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOk.IconSize = 24;
+            this.btnOk.IconSize = 38;
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOk.Location = new System.Drawing.Point(235, 67);
+            this.btnOk.Location = new System.Drawing.Point(224, 89);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(142, 30);
             this.btnOk.TabIndex = 0;
-            this.btnOk.Text = "&Close";
+            this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // pictureBox
             // 
-            this.pictureBox.Image = global::DPRNIII_U2_A1_MAZM.Properties.Resources.candado_color;
-            this.pictureBox.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(33, 22);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(115, 112);
+            this.pictureBox.Size = new System.Drawing.Size(96, 84);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
-            // MensajePersonalizado_2
+            // MensajePersonalizado_5
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 136);
-            this.Controls.Add(this.lblMensajePersonalizado_2);
+            this.ClientSize = new System.Drawing.Size(493, 136);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnOk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MensajePersonalizado_2";
+            this.Name = "MensajePersonalizado_5";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.MensajePersonalizado_2_Load);
+            this.Text = "Ingreso A Base De Datos";
+            this.Load += new System.EventHandler(this.MensajePersonalizado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,6 +101,5 @@ namespace DPRNIII_U2_A1_MAZM
         private FontAwesome.Sharp.IconButton btnOk;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.Label lblMensajePersonalizado_2;
     }
 }
