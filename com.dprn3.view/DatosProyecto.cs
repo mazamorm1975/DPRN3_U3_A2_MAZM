@@ -1,4 +1,5 @@
-﻿using DPRNIII_U2_A1_MAZM.com.dprn3.model;
+﻿using DPRNIII_U2_A1_MAZM.com.dprn3.interfaces;
+using DPRNIII_U2_A1_MAZM.com.dprn3.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,6 @@ namespace DPRNIII_U2_A1_MAZM
         {
             //Variables que reciben la información de los componentes
             noEmpleado = cboNumeroEmpleado.Text;
-            String idEmpleado = cboNumeroEmpleado.Text;
             idProyecto = cboFolio.Text;
             comentarios = txtComentarios.Text;
 
@@ -75,6 +75,24 @@ namespace DPRNIII_U2_A1_MAZM
         private void contenedorAsignacionProyecto_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void icbRemover_Click(object sender, EventArgs e)
+        {
+            noEmpleado = cboNumeroEmpleado.Text;
+            clsAltaInformacion.remueveEmpleadoDeProyecto(noEmpleado);
+            Notificacion remueveEmpleadoProyecto = new Notificacion(new NotificacionFueraDeProyecto());
+            remueveEmpleadoProyecto.MostrarMensaje();
+
+        }
+
+        private void btnActualiza_Click(object sender, EventArgs e)
+        {
+            idProyecto = cboFolio.Text;
+            noEmpleado = cboNumeroEmpleado.Text;
+            comentarios = txtComentarios.Text;
+            clsAltaInformacion.actualizaStatus(noEmpleado);
+            
         }
     }
 }

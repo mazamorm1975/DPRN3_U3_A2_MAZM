@@ -45,6 +45,8 @@ namespace DPRNIII_U2_A1_MAZM
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.dgvConsultaProyectos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.icbRemover = new FontAwesome.Sharp.IconButton();
+            this.btnActualiza = new FontAwesome.Sharp.IconButton();
             this.contenedorAsignacionProyecto.SuspendLayout();
             this.contenedorComentarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaProyectos)).BeginInit();
@@ -53,6 +55,8 @@ namespace DPRNIII_U2_A1_MAZM
             // 
             // contenedorAsignacionProyecto
             // 
+            this.contenedorAsignacionProyecto.Controls.Add(this.btnActualiza);
+            this.contenedorAsignacionProyecto.Controls.Add(this.icbRemover);
             this.contenedorAsignacionProyecto.Controls.Add(this.btnConsultar);
             this.contenedorAsignacionProyecto.Controls.Add(this.btnSalir);
             this.contenedorAsignacionProyecto.Controls.Add(this.btnIngresarAsignacion);
@@ -64,7 +68,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.contenedorAsignacionProyecto.Controls.Add(this.cboFolio);
             this.contenedorAsignacionProyecto.Location = new System.Drawing.Point(3, 3);
             this.contenedorAsignacionProyecto.Name = "contenedorAsignacionProyecto";
-            this.contenedorAsignacionProyecto.Size = new System.Drawing.Size(501, 144);
+            this.contenedorAsignacionProyecto.Size = new System.Drawing.Size(501, 191);
             this.contenedorAsignacionProyecto.TabIndex = 0;
             this.contenedorAsignacionProyecto.TabStop = false;
             this.contenedorAsignacionProyecto.Text = "Nueva_Asignacion_Empleado";
@@ -92,7 +96,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 28;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(357, 99);
+            this.btnSalir.Location = new System.Drawing.Point(355, 138);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(138, 31);
             this.btnSalir.TabIndex = 7;
@@ -107,9 +111,9 @@ namespace DPRNIII_U2_A1_MAZM
             this.btnIngresarAsignacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIngresarAsignacion.IconSize = 38;
             this.btnIngresarAsignacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresarAsignacion.Location = new System.Drawing.Point(355, 19);
+            this.btnIngresarAsignacion.Location = new System.Drawing.Point(9, 136);
             this.btnIngresarAsignacion.Name = "btnIngresarAsignacion";
-            this.btnIngresarAsignacion.Size = new System.Drawing.Size(138, 34);
+            this.btnIngresarAsignacion.Size = new System.Drawing.Size(277, 34);
             this.btnIngresarAsignacion.TabIndex = 6;
             this.btnIngresarAsignacion.Text = "Ingresar";
             this.btnIngresarAsignacion.UseVisualStyleBackColor = true;
@@ -397,7 +401,7 @@ namespace DPRNIII_U2_A1_MAZM
             // contenedorComentarios
             // 
             this.contenedorComentarios.Controls.Add(this.txtComentarios);
-            this.contenedorComentarios.Location = new System.Drawing.Point(3, 153);
+            this.contenedorComentarios.Location = new System.Drawing.Point(3, 200);
             this.contenedorComentarios.Name = "contenedorComentarios";
             this.contenedorComentarios.Size = new System.Drawing.Size(501, 52);
             this.contenedorComentarios.TabIndex = 1;
@@ -419,7 +423,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.dgvConsultaProyectos.Location = new System.Drawing.Point(6, 19);
             this.dgvConsultaProyectos.Name = "dgvConsultaProyectos";
             this.dgvConsultaProyectos.ReadOnly = true;
-            this.dgvConsultaProyectos.Size = new System.Drawing.Size(382, 177);
+            this.dgvConsultaProyectos.Size = new System.Drawing.Size(382, 224);
             this.dgvConsultaProyectos.TabIndex = 2;
             // 
             // groupBox1
@@ -427,16 +431,48 @@ namespace DPRNIII_U2_A1_MAZM
             this.groupBox1.Controls.Add(this.dgvConsultaProyectos);
             this.groupBox1.Location = new System.Drawing.Point(510, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 202);
+            this.groupBox1.Size = new System.Drawing.Size(394, 249);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Despliegue_Proyectos_Asignados";
+            // 
+            // icbRemover
+            // 
+            this.icbRemover.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.icbRemover.IconColor = System.Drawing.Color.Red;
+            this.icbRemover.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbRemover.IconSize = 28;
+            this.icbRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbRemover.Location = new System.Drawing.Point(355, 99);
+            this.icbRemover.Name = "icbRemover";
+            this.icbRemover.Size = new System.Drawing.Size(138, 33);
+            this.icbRemover.TabIndex = 9;
+            this.icbRemover.Text = "Elimina Registro";
+            this.icbRemover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbRemover.UseVisualStyleBackColor = true;
+            this.icbRemover.Click += new System.EventHandler(this.icbRemover_Click);
+            // 
+            // btnActualiza
+            // 
+            this.btnActualiza.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            this.btnActualiza.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnActualiza.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActualiza.IconSize = 28;
+            this.btnActualiza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualiza.Location = new System.Drawing.Point(355, 19);
+            this.btnActualiza.Name = "btnActualiza";
+            this.btnActualiza.Size = new System.Drawing.Size(138, 35);
+            this.btnActualiza.TabIndex = 10;
+            this.btnActualiza.Text = "Actualiza Estatus";
+            this.btnActualiza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualiza.UseVisualStyleBackColor = true;
+            this.btnActualiza.Click += new System.EventHandler(this.btnActualiza_Click);
             // 
             // frmAsignacionProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 210);
+            this.ClientSize = new System.Drawing.Size(911, 259);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.contenedorComentarios);
             this.Controls.Add(this.contenedorAsignacionProyecto);
@@ -472,5 +508,7 @@ namespace DPRNIII_U2_A1_MAZM
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox cboNumeroEmpleado;
         public System.Windows.Forms.ComboBox cboFolio;
+        private FontAwesome.Sharp.IconButton icbRemover;
+        private FontAwesome.Sharp.IconButton btnActualiza;
     }
 }

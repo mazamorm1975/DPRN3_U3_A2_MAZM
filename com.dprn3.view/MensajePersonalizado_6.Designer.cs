@@ -1,7 +1,7 @@
 ﻿
 namespace DPRNIII_U2_A1_MAZM
 {
-    partial class MensajePersonalizado_2
+    partial class MensajePersonalizado_6
     {
         /// <summary>
         /// Required designer variable.
@@ -52,9 +52,9 @@ namespace DPRNIII_U2_A1_MAZM
             this.lblMensajePersonalizado_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajePersonalizado_2.Location = new System.Drawing.Point(188, 32);
             this.lblMensajePersonalizado_2.Name = "lblMensajePersonalizado_2";
-            this.lblMensajePersonalizado_2.Size = new System.Drawing.Size(408, 16);
+            this.lblMensajePersonalizado_2.Size = new System.Drawing.Size(320, 16);
             this.lblMensajePersonalizado_2.TabIndex = 3;
-            this.lblMensajePersonalizado_2.Text = "No puede existir mas de 1 Lider De Proyecto en un mismo proyecto";
+            this.lblMensajePersonalizado_2.Text = "Un empleado no puede estar en 2 proyectos activos";
             // 
             // btnOk
             // 
@@ -64,7 +64,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.btnOk.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOk.IconSize = 24;
             this.btnOk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOk.Location = new System.Drawing.Point(235, 67);
+            this.btnOk.Location = new System.Drawing.Point(267, 67);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(142, 30);
             this.btnOk.TabIndex = 0;
@@ -82,7 +82,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
-            // MensajePersonalizado_2
+            // MensajePersonalizado_6
             // 
             this.AcceptButton = this.btnOk;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +95,7 @@ namespace DPRNIII_U2_A1_MAZM
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MensajePersonalizado_2";
+            this.Name = "MensajePersonalizado_6";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
